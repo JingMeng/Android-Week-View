@@ -1,21 +1,19 @@
 apply plugin: 'com.android.library'
 
-repositories {
-    mavenCentral()
-}
-
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    namespace 'com.alamkanak.weekview'
+    compileSdk 34
 
     defaultConfig {
-        minSdkVersion 9
-        targetSdkVersion 23
+        minSdk 14
+        targetSdk 34
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:23.1.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
 }
-
-apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
